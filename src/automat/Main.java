@@ -16,5 +16,8 @@ public class Main {
 		 
 		Kellerautomat k = new Loader().load(s);
 		System.out.println(k.check("((()))"));
+		System.out.println("Z{   aaa32144235dfsdfdgf}"
+				.matches("Z\\{\\s*([A-Za-z0-9]*\\s*,\\s*)*[A-Za-z0-9]{1,}\\s*\\}")
+				);
 	}
 }
