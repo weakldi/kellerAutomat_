@@ -86,9 +86,9 @@ public class Loader2 {
 			
 		}
 		for(int i = 0; i < tokens.size();){
-			String startZustand = 			tokens.get(i++);
-			char inputValue 	= 			tokens.get(i++).charAt(0);
-			String valueOnStack = 			tokens.get(i++);
+			String startZustand     = 		tokens.get(i++);
+			char inputValue 	= 		tokens.get(i++).charAt(0);
+			String valueOnStack     = 		tokens.get(i++);
 			byte operation 		= getOP(	tokens.get(i++));
 			String opValue 		= operation==0b0000001?tokens.get(i++):null;
 			String nextZustand	= tokens.get(i++);
