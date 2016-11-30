@@ -15,7 +15,7 @@ public class Loader2 {
 		for(String line:data.split("[\n\r]")){
 			line = line.replaceAll(";.*", "");//Kommentare entfehrnen
 			//Zustaende
-			if(line.matches("Z\\{\\s*([A-Za-z0-9]*\\s*,\\s*)*[A-Za-z0-9]{1,}\\s*\\}")){
+			if(line.matches("\\s*Z\\{\\s*([A-Za-z0-9]*\\s*,\\s*)*[A-Za-z0-9]{1,}\\s*\\}")){
 				line = line.replaceAll("Z\\{", "").replaceAll("\\}", "").replaceAll("\\s", "");
 				String[] zustände = line.split(",");
 				for (String name : zustände) {
@@ -24,7 +24,7 @@ public class Loader2 {
 				}	
 			}
 			//Endzustände
-			else if(line.matches("E\\{\\s*([A-Za-z0-9]*\\s*,\\s*)*[A-Za-z0-9]{1,}\\s*\\}")){
+			else if(line.matches("\\s*E\\{\\s*([A-Za-z0-9]*\\s*,\\s*)*[A-Za-z0-9]{1,}\\s*\\}")){
 				line = line.replaceAll("E\\{", "").replaceAll("\\}", "").replaceAll("\\s", "");
 				String[] zustände = line.split(",");
 				for (String name : zustände) {
@@ -36,11 +36,11 @@ public class Loader2 {
 				}
 			}
 			//Alphabeth
-			else if(line.matches("A\\{\\s*(\\w{1}\\s*,\\s*)*\\w{1}\\s*\\}")){
+			else if(line.matches("\\s*A\\{\\s*(\\w{1}\\s*,\\s*)*\\w{1}\\s*\\}")){
 				ea.setAlphabeth(line.replaceAll("Z\\{", "").replaceAll("\\}", "").replaceAll("\\s", "").replaceAll(",", ""));
 			}
 			//start
-			if(line.matches("S=\\s*\\w{1,}\\s*")){
+			if(line.matches("\\s*S=\\s*\\w{1,}\\s*")){
 				start = line.replaceAll("S=\\s*", "").replaceAll("\\s*", "");
 				
 			}

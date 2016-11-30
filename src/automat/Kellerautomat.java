@@ -18,6 +18,8 @@ public class Kellerautomat {
 	public boolean check(String word){
 		for(int i = 0; i < word.length();i++){
 			if(a.containsChar(word.charAt(i))){
+                            System.out.println(current);
+                                    
 				current = current.applyRules(word.charAt(i));
 				if(current == null){
 					System.out.println("Fehler");
