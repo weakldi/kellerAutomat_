@@ -1,5 +1,7 @@
 package automat;
 
+import javax.swing.JTextArea;
+
 public class Kellerautomat {
 	private EingabeAlphabeth a;
 	private Stack s;
@@ -36,6 +38,10 @@ public class Kellerautomat {
 		}
 		return false;
 	}
+        
+        public void checkUI(int clockSpeed,JTextArea srcArea){
+            
+        }
 	
 	public EingabeAlphabeth getA() {
 		return a;

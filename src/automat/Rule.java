@@ -45,4 +45,6 @@ public class Rule {
 	public void setActionValue(String actionValue) {
 		this.actionValue = actionValue;
 	}
+        
+        
 }
